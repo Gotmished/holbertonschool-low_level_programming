@@ -8,12 +8,10 @@
 
 int main(void)
 {
-	char nu;
+	int n;
 
-	for (nu = '0'; nu <= '9'; nu = nu + 1)
-	{
-		putchar(nu);
-	}
-	putchar('\n');
+	for (n = 0; n < 10; n = n + 1)
+		printf("%d", n);
+	printf("\n");
 	return (0);
 }
