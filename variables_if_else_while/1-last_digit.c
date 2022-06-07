@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** main - prints last digit of random number
+/**
+ * main - prints last digit of random number
  * stored in variable n
  * Return: Always 0 (success)
  */
