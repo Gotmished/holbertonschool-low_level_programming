@@ -10,7 +10,7 @@ int main(void)
 {
 	char nu;
 
-	for (nu = '1'; nu <= '9'; nu = nu + 1)
+	for (nu = '0'; nu <= '9'; nu = nu + 1)
 	{
 		putchar(nu);
 	}
