@@ -15,7 +15,7 @@ int _islower(int c)
 	n = 0;
 	while (ch <= 'z')
 	{
-		if (ch == 'c')
+		if (c == ch)
 		{
 			n = 1;
 		}
