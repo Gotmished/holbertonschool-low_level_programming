@@ -12,7 +12,7 @@ int _isdigit(int c)
 
 	i = 0;
 	n = 0;
-	while (i <= '9')
+	while (i <= 9)
 	{
 		if (c == i)
 		{
