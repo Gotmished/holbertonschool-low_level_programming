@@ -10,9 +10,9 @@ int _isdigit(int c)
 {
 	int i, n;
 
-	i = 0;
+	i = 48;
 	n = 0;
-	while (i <= 9)
+	while (i <= 57)
 	{
 		if (c == i)
 		{
