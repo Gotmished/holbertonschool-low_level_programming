@@ -13,7 +13,7 @@ int main(void)
 	int i;
 
 	i = 1;
-	while (i <= 100)
+	while (i <= 99)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
@@ -31,6 +31,12 @@ int main(void)
 		{
 			printf("%d ", i);
 		}
+		i = i + 1;
+	}
+	i = 100;
+	while (i <= 100)
+	{
+		printf("Buzz");
 		i = i + 1;
 	}
 	printf("\n");
