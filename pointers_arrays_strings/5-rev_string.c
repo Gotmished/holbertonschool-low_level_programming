@@ -7,7 +7,7 @@
 
 void rev_string(char *s)
 {
-	int i, j, k;
+	int i, j, new, stringlength;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -15,12 +15,16 @@ void rev_string(char *s)
 		i = i + 1;
 	}
 
-	j = i;
-	k = j - 1;
-	while (k >= 0)
+	stringlength = i;
+	i = 0;
+	j = stringlength - 1;
+	while (i < j)
 	{
-		_putchar(s[k]);
-		k = k - 1;
+		new = s[i];
+		s[i] = s[j];
+		s[j] = new;
+		i = i + 1;
+		j = j - 1;
 	}
 	_putchar('\n');
 }
