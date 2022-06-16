@@ -24,5 +24,5 @@ int _strcmp(char *s1, char *s2)
 	{
 		j = j + 1;
 	}
-	return (i - j);
+	return (j - i);
 }
