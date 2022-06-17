@@ -16,18 +16,9 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			/* returns everything from the ith element onward*/
 			return (s + i);
 		}
 		i = i + 1;
 	}
-
-	if (*(s + i) == c)
-	{
-		return (s + i);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
