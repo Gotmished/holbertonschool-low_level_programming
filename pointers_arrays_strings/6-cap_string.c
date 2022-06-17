@@ -16,6 +16,12 @@ char *cap_string(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
+		/* This if statement takes care of a lowercase first letter */
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = s[i] - 32;
+		}
+
 		j = 0;
 		while (j < 13)
 		{
