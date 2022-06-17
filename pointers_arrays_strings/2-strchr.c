@@ -12,10 +12,11 @@ char *_strchr(char *s, char c)
 	int i;
 
 	i = 0;
-	while (s[i] != 0)
+	while (*(s + i) != 0)
 	{
-		if (s[i] == c)
+		if (*(s + i) == c)
 		{
+			/* returns everything from the ith element onward*/
 			return (s + i);
 		}
 		i = i + 1;
