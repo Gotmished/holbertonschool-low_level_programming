@@ -1,13 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * **alloc_grid - returns a pointer to a 2D array of integers
  * @width: width of the array
  * @height: height of the array
  * Return: NULL on failure, if width or height are <= 0. A pointer, otherwise
  */
-
 int **alloc_grid(int width, int height)
 {
 	int i, j, **a;
@@ -18,6 +16,11 @@ int **alloc_grid(int width, int height)
 	}
 
 	a = (int **)malloc(sizeof(int *) * height);
+	if (a == 0)
+	{
+		return (NULL);
+	}
+	
 	i = 0;
 	while (i < height)
 	{
