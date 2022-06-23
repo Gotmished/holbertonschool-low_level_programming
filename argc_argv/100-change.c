@@ -23,16 +23,16 @@ int main(int argc, char **argv)
 	}
 
 	a = atoi(argv[1]);
-	while (a < 0)
+	if (a < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
 
+	count = 0;
 	i = 0;
-	if (i < 5)
+	while (i < 5)
 	{
-		count = 1;
 		while (a >= coins[i])
 		{
 			count = count + 1;
