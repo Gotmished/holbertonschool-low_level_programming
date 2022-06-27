@@ -28,6 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (i < (size * nmemb))
 	{
 		ptr[i] = 0;
+		i = i + 1;
 	}
 	return (ptr);
 }
