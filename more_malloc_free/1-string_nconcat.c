@@ -2,6 +2,25 @@
 #include "main.h"
 
 /**
+ * _strlen - returns the length of a string
+ * @s: pointer to the string
+ * Return: returns the string length
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i = i + 1;
+	}
+
+	return (i);
+}
+
+/**
  * *string_nconcat - concatenates two strings
  * @s1: string one
  * @s2: string two
@@ -17,34 +36,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		i = 0;
-	}
-	else
-	{
-		i = 0;
-		while (s1[i] != '\0')
-		{
-			i = i + 1;
-		}
+		s1 = "";
 	}
 
 	if (s2 == NULL)
 	{
-		j = 0;
-	}
-	else
-	{
-		j = 0;
-		while (s2[j] != '\0')
-		{
-			j = j + 1;
-		}
+		s2 = "";
 	}
 
-	if (j > n)
-	{
-		j = n;
-	}
+	i = _strlen(s1);
+	j = _strlen(s2);
 
 	s = malloc(sizeof(*s) * (i + j + 1));
 	if (s == NULL)
@@ -59,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k = k + 1;
 	}
 	k = 0;
-	while (k < j)
+	while (k < j && j != n)
 	{
 		s[k + i] = s2[k];
 		k = k + 1;
