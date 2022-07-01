@@ -23,19 +23,19 @@ int main(int argc, char *argv[])
 	if (a < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 
 	s = (char *)main;
 	i = 0;
 	while (i < a)
 	{
-		printf("%.2hhx ", s[i]);
 		if (i == a - 1)
 		{
 			printf("%.2hhx\n", s[i]);
 			break;
 		}
+		printf("%.2hhx ", s[i]);
 		i = i + 1;
 	}
 	return (0);
