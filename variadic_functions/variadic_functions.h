@@ -3,8 +3,8 @@
 
 #include <stdarg.h>
 /**
- * struct print - print type with corresponding print function
- * @vars: print type
+ * struct vars - matches variable type to appropriate print function
+ * @vars: var type
  * @f: print function
  */
 typedef struct vars
