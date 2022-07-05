@@ -72,15 +72,27 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
+	if (format == NULL)
+	{
+		return;
+	}
+/*	int tab[] = {1, 2, 3, 4, 5};
+	vars_t st = {"j", print_j};
+	vars_t st_2 = {"h", print_h};
+	vars_t v2[] = {
+		st,
+		st_2,
+		{NULL, NULL}
+		}; */
 	va_start(list, format);
 	separator = "";
 	i = 0;
-	while (format && format[i])
+	while (format[i] != '\0')
 	{
 		j = 0;
-		while (v[j].vars != NULL)
+		while (v[j].t != NULL)
 		{
-			if (*(v[j].vars) == format[i])
+			if (*(v[j].t) == format[i])
 			{
 				printf("%s", separator);
 				v[j].f(list);

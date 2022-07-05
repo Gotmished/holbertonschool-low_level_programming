@@ -3,14 +3,14 @@
 
 #include <stdarg.h>
 /**
- * struct vars - matches variable type to appropriate print function
- * @vars: var type
+ * struct print - matches variable type to appropriate print function
+ * @t: var type
  * @f: print function
  */
-typedef struct vars
+typedef struct print
 {
-	char *vars;
-	void (*f)(va_list);
+	char *t;
+	void (*f)(va_list list);
 } vars_t;
 
 int _putchar(char c);
