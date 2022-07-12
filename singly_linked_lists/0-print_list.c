@@ -10,9 +10,8 @@
 
 size_t print_list(const list_t *h)
 {
-	int number;
+	int number = 0;
 
-	number = 0;
 /* as long as the pointer is pointing to something extant */
 	while (h != NULL)
 	{
