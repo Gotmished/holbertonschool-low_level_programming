@@ -14,12 +14,11 @@ list_t *add_node(list_t **head, const char *str)
 	/* head pointer already provided */
 	list_t *new_node;
 
-	if (head == NULL)
+	new_node = malloc(sizeof(*new_node));
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
-
-	new_node = malloc(sizeof(*new_node));
 	/* new node needs to be associated with given data */
 	/* duplicate, as *str is const */
 	new_node->str = strdup(str);
