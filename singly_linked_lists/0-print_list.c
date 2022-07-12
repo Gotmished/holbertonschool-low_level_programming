@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 	int number;
 
 	number = 0;
-	/* as long as the pointer is pointing to something extant */
+/* as long as the pointer is pointing to something extant */
 	while (h != NULL)
 	{
 		/* if the pointer is pointing to a NULL list */
