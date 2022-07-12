@@ -34,3 +34,7 @@ size_t print_list(const list_t *h)
 	}
 	return (number);
 }
+
+/*
+ * If list_t hello = {"World", 5, NULL}, and if struct list_s *next, next eventually points to a NULL list. * This means that, after printing "World", h = NULL, and the program is complete.
+ */
