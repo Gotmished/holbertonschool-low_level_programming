@@ -51,6 +51,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = new_node;
+		return (new_node);
 	}
 	/* Otherwise, find and set last node to new node */
 	else
