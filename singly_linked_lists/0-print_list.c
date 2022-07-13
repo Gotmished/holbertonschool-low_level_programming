@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 /* as long as the pointer is pointing to something extant */
 	while (h != NULL)
 	{
-		/* if the pointer is pointing to a NULL list */
+		/* if the pointer is pointing to a node that doesn't contain a string */
 		if (h->str ==  NULL)
 		{
 			printf("[0] (nil)\n");
