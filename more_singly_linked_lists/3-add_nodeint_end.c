@@ -2,24 +2,6 @@
 #include "lists.h"
 
 /**
- * _strlen - finds the length of a string
- * @str: string to find the length of
- *
- * Return: length of string
- */
-unsigned int _strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i = i + 1;
-	}
-	return (i);
-}
-
-/**
  * add_nodeint_end - adds a new node at the end of a listint_t list
  * @head: pointer to a pointer to head of linked list
  * @n: an integer contained in the node
