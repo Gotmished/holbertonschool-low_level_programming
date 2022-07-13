@@ -17,7 +17,8 @@ void free_list(list_t *head)
 		free(head);
 		head = temporary;
 		/*
-		 * Let temp point to the next node, then free head's prior
+		 * Head currently points to the first node, so
+		 * let temp point to the next node, then free head's prior
 		 * association with str, and then head itself, before
 		 * allowing head to take over from temp, and
 		 * point to the next node.
