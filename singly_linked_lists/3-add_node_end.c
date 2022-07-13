@@ -45,7 +45,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	new_node->len = _strlen(new_node->str);
-	
+	/* set the new node to NULL, just to begin */
+	new_node->next = NULL;
 	/* new node is now the head node if head points to NULL */
 	if (*head == NULL)
 	{
