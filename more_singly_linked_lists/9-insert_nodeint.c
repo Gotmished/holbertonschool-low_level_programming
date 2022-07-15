@@ -19,22 +19,34 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 
-	/* if head is **, must create a temporary association to manipulate */
-	temp = *head;
-	i = 0;
-	while (i < idx)
-	{
-		temp = temp->next;
-		i = i + 1;
-	}
-
 	new_node = malloc(sizeof(*new_node));
 	if (new_node == NULL)
 	{
 		return (NULL);
 	}
 	new_node->n = n;
-	new_node->next = temp;
-	new_node = temp;
+	new_node->next = NULL;
+	/* if inserted as first node */
+	if (idx == 0)
+	{
+		new_node->next = *head;
+		*head = new_node;
+	}
+	else
+	{
+/* if head is **, must create a temporary association to manipulate */
+		temp = *head;
+		i = 0;
+		while (i < idx - 1)
+		{
+/* idx-1 because next will be pointing to the idx node at this point */
+			temp = temp->next;
+			i = i + 1;
+		}
+	}
+	/* Assign new's next to temp's next */
+	new_node->next = temp->next;
+	/* Assign temp's next to point to new_node's address */
+	temp->next = new_node;
 	return (new_node);
 }
