@@ -7,9 +7,9 @@
  * Return: a count to be sent below
  */
 
-int count_bits(int a)
+unsigned int count_bits(unsigned long int a)
 {
-	int count;
+	unsigned int count;
 
 	count = 0;
 	while (a > 0)
