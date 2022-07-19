@@ -27,7 +27,7 @@ size_t _strlen(char *str)
 /**
  * create_file - creates a file
  * @filename: the text file to be created
- * @text_context: a NULL-terminated string to be written
+ * @text_content: a NULL-terminated string to be written
  * Return: 1 upon success, -1 upon failure
  */
 
