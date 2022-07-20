@@ -7,10 +7,10 @@
 
 /**
  * file_copy - copies the content of one file to another
- * @file_from: the file to be copied from
- * @file_to: the file to receive the copy
- * @ff: pointer to 'file_from'
- * @ft: pointer to 'file_to'
+ * @ff: the file to be copied from
+ * @ft: the file to receive the copy
+ * @file_from: pointer to 'file_from'
+ * @file_to: pointer to 'file_to'
  * Return: An error message
  */
 
