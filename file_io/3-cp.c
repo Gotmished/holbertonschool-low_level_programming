@@ -2,8 +2,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
 
 /**
  * file_copy - copies the content of one file to another
@@ -33,15 +32,13 @@ int file_copy(int ff, int ft, char *file_from, char *file_to)
 		exit(99);
 	}
 
-	file_from = close(ff);
-	if (file_from == -1)
+	if (close(ff) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", ff);
 		exit(100);
 	}
 
-	file_to = close(ft);
-	if (file_to == -1)
+	if (close(ft) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close ft %i\n", ft);
 		exit(100);
@@ -81,7 +78,7 @@ int main(int argc, char *argv[])
 		close(ft);
 		exit(99);
 	}
-	close(fd);
+	close(ff);
 	close(ft);
 	return (file_copy(ff, ft, argv[1], argv[2]));
 }
