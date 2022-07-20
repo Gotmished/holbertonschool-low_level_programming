@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
 
 	ff = open(argv[1], O_RDONLY);
@@ -73,7 +74,7 @@ int main(int argc, char *argv[])
 
 	/* TRUNC clears a pre-existing file to overwrite */
 	ft = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
-	if (argv[2] == NULL || ft == -1)
+	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		close(ft);
