@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 		close(ft);
 		exit(99);
 	}
+	return (file_copy(ff, ft, argv[1], argv[2]));
 	close(ff);
 	close(ft);
-	return (file_copy(ff, ft, argv[1], argv[2]));
 }
