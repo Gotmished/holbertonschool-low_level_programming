@@ -53,6 +53,12 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		last_node = *head;
 		while (last_node->next != NULL)
 		{
+			/*
+			 * If last_node's next points to another node
+			 * let last_node hold what next holds, which
+			 * is the address of the next node. Last node
+			 * effectively becomes the next node along.
+			 */
 			last_node = last_node->next;
 		}
 	}
