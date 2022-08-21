@@ -50,22 +50,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *node;
 	hash_node_t **array;
-	size_t i;
 
 	if (ht == NULL || key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 	array = ht->array;
-	i = index;
-	while (array[i] != NULL)
+	while (array[index] != NULL)
 	{
-		if (strcmp(array[i]->key, key) == 0)
+		if (strcmp(array[index]->key, key) == 0)
 		{
-			free(array[i]->value);
-			array[i]->value = strdup(value);
+			free(array[index]->value);
+			array[index]->value = strdup(value);
 			return (1);
 		}
-		i = i + 1;
+		array[index] = array[index]->next;
 	}
 	node = create_node(key, value);
 	if (array[index] == NULL)
