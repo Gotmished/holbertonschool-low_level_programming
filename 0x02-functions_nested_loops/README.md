@@ -1,0 +1,1 @@
+This directory contains tasks from project 0x02-functions_nested_loops

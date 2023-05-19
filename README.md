@@ -1,1 +1,1 @@
-Readme for project one, week seven
+Projects concerning C basics

@@ -1,0 +1,1 @@
+This directory contains tasks from project 0x15-singly_linked_lists

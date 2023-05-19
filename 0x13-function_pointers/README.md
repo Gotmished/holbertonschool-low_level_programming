@@ -1,0 +1,1 @@
+This directory contains tasks from project 0x13-function_pointers
